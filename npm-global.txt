@@ -1,0 +1,10 @@
+/home/alexandre/.nvm/versions/node/v18.15.0/lib
+├── @nestjs/cli@9.3.0
+├── @quasar/cli@2.0.0
+├── corepack@0.15.3
+├── knex@2.4.2
+├── npm-check-updates@16.10.7
+├── npm@9.5.0
+├── pm2@5.3.0
+├── pnpm@8.2.0
+└── yarn@1.22.19
