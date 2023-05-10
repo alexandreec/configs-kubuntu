@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# slimblade
+slimblade_id=$(xinput | grep "Kensington Slimblade Trackball" | awk {'print substr($7,4,2)'})
+echo $slimblade_id > ~/slimblade_id
+
+# left
+#xinput set-button-map $slimblade_id 8 3 1 5 4 6 7 2 9 10 11 12
+
+# right
+#xinput set-button-map $slimblade_id 1 2 8 4 5 6 7 3 9 10 11 12
+xinput set-button-map $slimblade_id 9 2 1 4 5 6 7 3 8 10 11 12
+#xinput set-prop "Kensington kensignton Slimblade Trackball" "Evdev Scrolling Distance" -1 1 1
+
+# freestyle2
+setxkbmap -layout es -option ctrl:nocaps
+xmodmap -e "keycode 118 = Pause"
+xmodmap -e "keycode 135 = Delete"
+xmodmap -e "keycode 105 = Caps_Lock"
+xmodmap -e "keycode 107 = F13"
+xmodmap -e "keycode 119 = F14"
+xmodmap -e "keycode 127 = F15"
+#xmodmap -e "keycode 127 = Insert"
+
+
+#setxkbmap -option caps:none
+xmodmap -e 'clear Lock'
+
+#invertir números i símbols, ñ mode_switch
+#xmodmap -e 'keycode 47 = Mode_switch'
+
+#xmodmap -e "keycode 38 = a A exclam"
+#xmodmap -e "keycode 39 = s S quotedbl"
+#xmodmap -e "keycode 40 = d D periodcentered"
+#xmodmap -e "keycode 41 = f F dollar"
+#xmodmap -e "keycode 42 = g G percent"
+#xmodmap -e "keycode 43 = h H ampersand"
+#xmodmap -e "keycode 44 = j J slash"
+#xmodmap -e "keycode 45 = k K parenleft"
+#xmodmap -e "keycode 46 = l L parenright"
+#xmodmap -e "keycode 54 = c C ccedilla"
+#xmodmap -e "keycode 57 = n N ntilde"
+#xmodmap -e "keycode 94 = less greater greater"
+
+#xmodmap -e "keycode 51 = equal"
+
+#intercanviar ñ per ç
+xmodmap -e "keycode 47 = ccedilla ntilde"
+xmodmap -e "keycode 51 = ntilde Ntilde braceright braceright braceright"
+
+: <<'ENDCOMMENT'
+
+ENDCOMMENT
